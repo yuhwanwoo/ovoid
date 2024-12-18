@@ -38,13 +38,18 @@ driver.find_element(By.XPATH, '/html/body/div[1]/article/div/article/section/art
 time.sleep(3)
 # driver.get('https://facility.ticketlink.co.kr/reserve/product/51358/schedule/sports?teamId=133&menuIndex=reserve')
 
-print(driver.window_handles)
-
 while len(driver.window_handles) == 1:
         pass
 
 driver.switch_to.window(driver.window_handles[1])
 
+driver.find_element(By.XPATH, '/html/body/div/div[2]/div[1]/div/table/tbody/tr[1]/td[4]/a').click()
+
+print(driver.window_handles)
+driver.find_element(By.XPATH, '/html/body/div[2]/div[2]/div[2]/button').click()
+
+driver.find_element(By.XPATH, '/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/ul/li[6]/a/div/span[1]').click()
+driver.find_element(By.XPATH, '/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/ul/li[6]/div/div/span/a').click()
 
 
 
